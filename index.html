@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+
+    
+ 
+</head>
+<!-- Inicio do body -->
+<body id="body">
+
+
+    <!-- Botão para trocar de padrão de cores -->
+    <button id="buttonTrocaDeCor" onclick="buttonTrocarCor()"  class="black"><i id="buttonCor" class="fas fa-sun sun-icon"></i></button>
+
+
+    <!-- Corpo da Calculadora -->
+    <div id="calculadora" class="padraoDeCorUm">
+
+
+        <!-- Visor e Historico -->
+        <textarea id="historico" readonly></textarea>
+        <input type="text" id="visor" readonly>
+
+        <!-- Botões -->
+        <div id="buttonEOperadores">
+
+            <!-- 1° Linha -->
+            <button  id="apagar" onclick="apagar()" >APAGAR </button>
+            <button onclick="limpar()">C</button>
+            <button onclick="operador('+')">+</button>
+
+            <!-- 2° linha -->
+            <button class="number" onclick="addVisor('1')">1</button>
+            <button class="number" onclick="addVisor('2')">2</button>
+            <button class="number" onclick="addVisor('3')">3</button>
+            <button onclick="operador('-')">-</button>
+
+            <!-- 3° linha -->
+            <button class="number" onclick="addVisor('4')">4</button>
+            <button class="number" onclick="addVisor('5')">5</button>
+            <button class="number" onclick="addVisor('6')">6</button>
+            <button onclick="operador('*')">x</button>
+
+            <!-- 4° linha -->
+            <button class="number" onclick="addVisor('7')">7</button>
+            <button class="number" onclick="addVisor('8')">8</button>
+            <button class="number" onclick="addVisor('9')">9</button>
+            <button onclick="operador('/')">&#247;</button>
+
+            <!-- 5° linha -->
+            <button id="zero" class="number" onclick="addVisor('0')">0</button>
+            <button onclick="pontuacao()">,</button>
+            <button class="igual" onclick="resultado()">=</button>
+            
+            
+        <!-- Fechamento da Div Botões -->
+        </div> 
+        
+    <!-- Fechamento da Div Corpo Calculadora -->    
+    </div>
+
+
+
+    <script src="./script.js"></script>
+
+<!-- fim do body -->
+</body>
+</html>
